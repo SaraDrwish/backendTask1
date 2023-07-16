@@ -86,7 +86,7 @@ const personupdat = yargs.command({
         }
     } ,
     handler: () => {
-        console.log("you have updated the object ")
+        console.log("Did update")
     }
  
 })
