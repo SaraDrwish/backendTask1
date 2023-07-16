@@ -28,8 +28,7 @@ fs.writeFileSync("data1.json", "personJson");
 
 // 4) read file (json)
 
-// fs.readFileSync("data1").toString();
-const read = fs.readFileSync("data1.json").toString();
+ const read = fs.readFileSync("data1.json").toString();
  console.log(read)
 
 // 5) Convert to obj
@@ -38,26 +37,7 @@ const personObj = JSON.parse(personJson)
 console.log(personObj);
 
 // 6) Update data to ( adel ahmed , 40 , cairo)
-
-// const personupdat = {
-//     fname :"ahmed",
-//     lname: "darwish",
-//     age : 44,
-//     city: "alex"
-// }
-
-// const command1 = process.argv[2]{
-//      if(command1 === "update"){
-//             const personupdat = {
-//             fname :"ahmed",
-//             lname: "darwish",
-//             age : 44,
-//             city: "alex"
-//             }
-//    } else {
-//     console.log("erorr")
-//     }
-// }
+ 
 
 const personupdat = yargs.command({
 
@@ -91,35 +71,20 @@ const personupdat = yargs.command({
  
 })
 
+
 console.log(yargs.argv)
-
-// const x = personupdat.assign(sasa.fname, aaaa.lname);
-// console.log(x);
-
-// console.log(person.replace('sara', 'ahmed'));
-// console.log(person.replace('26', '44'));
-// console.log(person.replace('adel', 'drwish'));
-// console.log(person.replace('cairo', 'alex'));
-
+ 
 
 // 7) convert obj to Json
  
 const personupdatJson = JSON.stringify(personupdat) ;
-// const personupdatJson = JSON.stringify(personupdat).toString;
-console.log(personupdatJson);
+ console.log(personupdatJson);
 
-// console.log( typeof personupdatJson);
-// console.log( typeof JSON.parse(personupdatJson) );
-// console.log( typeof JSON.stringify(personupdatJson) );
-
+ 
 //8) store in file (writeFileSync)
 
 fs.writeFileSync("dara1.json", "personupdat");
-// console.log(  );
-
-// const x = require("./allData")
-
-// console.log(x)
+ 
 
 ///////////////////////////////////////// end task 1 /////////////////////////////////////////////////////////
 
@@ -170,7 +135,6 @@ yargs.command({
         data.deleteData(x.id)
     }
  })
-
  yargs.command ({
     command : "read",
     describe : "read",
@@ -185,8 +149,6 @@ yargs.command({
         data.readData (x.id)
     }
  })
-
-
  yargs.command ({
     command :"list",
     describe : "list",
@@ -194,7 +156,6 @@ yargs.command({
         data.listData()
     }
  })
- 
  yargs.parse() 
    
 
